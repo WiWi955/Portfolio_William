@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="À propos | William NGUYEN" description="Découvrez le profil de William NGUYEN, alternant en informatique spécialisé en systèmes, réseaux et cloud.">
+	<div class="stack gap-20">
+        <main class="wrapper about">
+            <Hero
+                title="À propos"
+                tagline="Merci de votre visite. Découvrez ci-dessous mon parcours, mes compétences et mon expérience professionnelle."
+            >
+                <img
+                    width="1553"
+                    height="873"
+                    src="/assets/at-work.jpg"
+                    alt="William NGUYEN en train de travailler sur un projet informatique"
+                />
+            </Hero>
+
+            <section>
+                <h2 class="section-title">Profil</h2>
+                <div class="content">
+                    <p>
+                        Alternant en informatique spécialisé en systèmes, réseaux, je recherche un poste en alternance pour 12 mois pour Septembre 2025. Fort d’une expérience en support technique et administration réseau, je suis motivé à contribuer à l’optimisation des infrastructures informatiques de votre entreprise. Je suis en deuxième année de BTS Systèmes d'Information et Organisation option SISR au Lycée Robert Schuman, et je souhaite poursuivre avec un Bachelor en Systèmes, Réseaux et Cloud, puis un Master spécialisé dans la cybersécurité.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Éducation</h2>
+                <div class="content">
+                    <ul>
+						<!-- <li><strong>2025–2026</strong> : Bachelor 3 Systèmes, Réseaux et Cloud - Lycée Robert Schuman</li> -->
+                        <li><strong>2023–2025</strong> : BTS Systèmes d'Information et Organisation option SISR - Lycée Robert Schuman</li>
+                        <li><strong>2022</strong> : Baccalauréat Systèmes Numériques option C</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Certifications</h2>
+                <div class="content">
+                    <ul>
+                        <li>Certification CCNA de Cisco</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Compétences Techniques</h2>
+                <div class="content">
+                    <ul>
+                        <li><strong>Systèmes d'exploitation</strong> : Windows Server 2022, Linux Debian 12</li>
+                        <li><strong>Virtualisation</strong> : Hyper-V, VirtualBox</li>
+                        <li><strong>Réseau</strong> : Installation, configuration et dépannage des équipements</li>
+                        <li><strong>Sécurité</strong> : Configuration de pare-feu, surveillance et optimisation</li>
+                        <li><strong>Base de données</strong> : Oracle (SQL Developer)</li>
+                        <li><strong>Langages</strong> : SQL, Shell Unix, Batch Windows, XML, PHP, HTML/CSS</li>
+                        <li><strong>Conformité</strong> : RGPD & CNIL</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Expérience Professionnelle</h2>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <strong>PROTEC Industrie - Stage Technicien Réseau & Support (05/2024 - 12/2024)</strong>
+                            <ul><br>
+                                <li>Support technique (réduction des incidents de 20%)</li>
+                                <li>Maintenance et mise à jour du parc informatique</li>
+                                <li>Sécurisation des infrastructures réseau</li><br>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>UNISYS - Stage Technicien Informatique (05/2024)</strong>
+                            <ul><br>
+                                <li>Installation et réparation des équipements</li>
+                                <li>Optimisation du parc informatique (stabilité réseau +15%)</li>
+                                <li>Déploiement et dépannage des infrastructures IT</li><br>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>SAINT-JOSEPH (Le Pré-Saint-Gervais) - Stage Administrateur Réseau (05/2021)</strong>
+                            <ul><br>
+                                <li>Support aux utilisateurs</li>
+                                <li>Configuration et dépannage réseau</li>
+                                <li>Surveillance des performances réseau</li><br>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Qualité</h2>
+                <div class="content">
+                    <ul>
+                        <li>Esprit d’analyse et de résolution de problèmes</li>
+                        <li>Travail en équipe et autonomie</li>
+                        <li>Communication efficace et adaptabilité</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Langues</h2>
+                <div class="content">
+                    <ul>
+                        <li><strong>Anglais</strong> : Niveau professionnel (B2)</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

@@ -114,10 +114,10 @@ const projects = (await getCollection('work')).sort(
 		.password-protected {
 			display: flex;
 			justify-content: center;
-			align-items: center;
-			height: 100vh;
-			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-			color: white;
+			align-items: flex-start; /* Alignement en haut */
+			height: 50vh; /* Réduit la hauteur du conteneur */
+			padding-top: 10vh; /* Déplace le formulaire vers le haut */
+			background-color: var(--background); /* Conserve le fond d'origine */
 		}
 
 		.hidden {
@@ -125,19 +125,21 @@ const projects = (await getCollection('work')).sort(
 		}
 
 		.password-protected form {
-			background: rgba(255, 255, 255, 0.1);
-			padding: 2rem;
-			border-radius: 8px;
-			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-			backdrop-filter: blur(10px);
-			width: 300px;
-			text-align: center;
+			width: 420px;
+			background: transparent;
+			border: 2px solid rgba(110, 93, 93, 0.2);
+			backdrop-filter: blur(20px);
+			box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+			color: #756a6a; /* Updated color */
+			border-radius: 20px;
+			padding: 30px 40px;
+			margin-top: -50px; /* Ajuste la position du formulaire */
 		}
 
 		.password-protected label {
 			display: block;
 			margin-bottom: 0.5rem;
-			color: white;
+			color: var(--text);
 			font-size: 1.1rem;
 		}
 
@@ -145,17 +147,17 @@ const projects = (await getCollection('work')).sort(
 			width: 100%;
 			padding: 0.5rem;
 			margin-bottom: 1rem;
-			border: 1px solid rgba(255, 255, 255, 0.3);
+			border: 2px solid rgba(110, 93, 93, 0.2);
 			border-radius: 4px;
-			background: rgba(255, 255, 255, 0.1);
-			color: white;
+			background: var(--background-alt);
+			color: var(--text);
 		}
 
 		.password-protected button {
 			width: 100%;
 			padding: 0.5rem;
-			background-color: #667eea;
-			color: white;
+			background-color: var(--accent-regular);
+			color: var(--text-alt);
 			border: none;
 			border-radius: 4px;
 			cursor: pointer;
@@ -163,7 +165,7 @@ const projects = (await getCollection('work')).sort(
 		}
 
 		.password-protected button:hover {
-			background-color: #764ba2;
+			background-color: var(--accent-hover);
 		}
 
 		.error-message {
@@ -176,7 +178,7 @@ const projects = (await getCollection('work')).sort(
 			display: inline-block;
 			width: 20px;
 			height: 20px;
-			background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 2C9.243 2 7 4.243 7 7v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7c0-2.757-2.243-5-5-5zm0 2c1.654 0 3 1.346 3 3v3H9V7c0-1.654 1.346-3 3-3zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>');
+			background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="grey"><path d="M12 2C9.243 2 7 4.243 7 7v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7c0-2.757-2.243-5-5-5zm0 2c1.654 0 3 1.346 3 3v3H9V7c0-1.654 1.346-3 3-3zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>');
 			background-repeat: no-repeat;
 			background-position: center;
 			margin-right: 0.5rem;
